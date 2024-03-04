@@ -14,7 +14,7 @@ const About = () => {
 				/>
 			</div>
 			<div className="lg:col-span-4 md:col-span-6 flex flex-col justify-center mx-[20px] md:mx-[40px]">
-				<h2>About Our Furniture</h2>
+				<h2 className="pb-2">About Our Furniture</h2>
 				<p>
 					Our multifunctional collection blends design and function to suit your individual taste.
 					Make each room unique, or pick a cohesive theme that best express your interests and what

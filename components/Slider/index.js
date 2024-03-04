@@ -44,9 +44,39 @@ const Slider = () => {
 	};
 
 	return (
-		<div className="grid grid-cols-6 md:grid-cols-12 grid-rows-6 h-[750px] md:h-[525px]">
-			<div className="md:col-start-1 md:col-end-8 col-span-full row-start-1 row-end-4 md:row-span-full relative">
-				<div className="absolute z-50 top-14 left-2 sm:max-w-[360px] sm:top-14 sm:left-14 w-full">
+		<div
+			className="
+				grid
+				grid-cols-6
+				md:grid-cols-12
+				grid-rows-6
+				h-[750px]
+				md:h-[525px]
+			"
+		>
+			<div
+				className="
+					relative
+					col-span-full
+					md:col-start-1
+					md:col-end-8
+					row-start-1
+					row-end-4
+					md:row-span-full
+				"
+			>
+				<div
+					className="
+						absolute
+						z-50
+						top-14
+						sm:top-14
+						left-2
+						sm:left-14
+						w-full
+						sm:max-w-[360px]
+					"
+				>
 					<Navbar />
 				</div>
 				<Image
@@ -64,18 +94,18 @@ const Slider = () => {
 			</div>
 			<div
 				className="
+					col-span-full
 					md:col-start-8
 					md:col-end-13
-					md:row-start-2
-					md:row-end-5
-					col-span-full
 					row-start-4
 					row-end-7
-					xl:px-[90px]
-					lg:px-[45px]
+					md:row-start-2
+					md:row-end-5
 					px-[20px]
 					pt-[45px]
 					md:pt-0
+					lg:px-[45px]
+					xl:px-[90px]
 				"
 			>
 				<h1>{title}</h1>
@@ -92,7 +122,21 @@ const Slider = () => {
 					</button>
 				</div>
 			</div>
-			<div className="bg-[#000] flex cursor-pointer col-start-6 lg:col-start-8 lg:col-end-9 row-start-3 md:row-start-6 md:col-start-8 md:col-end-10 z-10">
+			<div
+				className="
+					bg-[#000]
+					flex
+					col-start-6
+					md:col-start-8
+					md:col-end-10
+					lg:col-start-8
+					lg:col-end-9
+					row-start-3
+					md:row-start-6
+					z-10
+					cursor-pointer
+				"
+			>
 				<div
 					className="w-1/2 m-auto"
 					onClick={ prevSlide }
