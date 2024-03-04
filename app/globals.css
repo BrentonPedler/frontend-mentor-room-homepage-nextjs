@@ -20,12 +20,11 @@ h2 {
 }
 
 p {
-	color: #454545;
-	font-size: 0.75rem;
+	color: #a1a1a1;
+	font-size: 0.875rem;
 }
 
 li {
-	color: #fff;
 	cursor: pointer;
 }
 

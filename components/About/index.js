@@ -13,7 +13,7 @@ const About = () => {
 					className="col-span-1"
 				/>
 			</div>
-			<div className="lg:col-span-4 md:col-span-6 flex flex-col justify-center mx-[40px]">
+			<div className="lg:col-span-4 md:col-span-6 flex flex-col justify-center mx-[20px] md:mx-[40px]">
 				<h2>About Our Furniture</h2>
 				<p>
 					Our multifunctional collection blends design and function to suit your individual taste.

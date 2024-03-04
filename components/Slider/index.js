@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+import Navbar from "../Navbar";
 import { useState } from 'react';
 import IconLeft from "../../public/icon-angle-left.svg";
 import IconRight from "../../public/icon-angle-right.svg";
@@ -45,6 +46,9 @@ const Slider = () => {
 	return (
 		<div className="grid grid-cols-6 md:grid-cols-12 grid-rows-6 h-[750px] md:h-[525px]">
 			<div className="md:col-start-1 md:col-end-8 col-span-full row-start-1 row-end-4 md:row-span-full relative">
+				<div className="absolute z-50 top-14 left-2 sm:max-w-[360px] sm:top-14 sm:left-14 w-full">
+					<Navbar />
+				</div>
 				<Image
 					src={desktopImage}
 					alt="Slide Image Desktop"
@@ -58,11 +62,26 @@ const Slider = () => {
 					className="xs:hidden block"
 				/>
 			</div>
-			<div className="md:col-start-8 md:col-end-13 col-span-full row-start-5 row-end-7 md:row-start-2 md:row-end-5 xl:px-[90px] lg:px-[45px] md:px-[20px]">
+			<div
+				className="
+					md:col-start-8
+					md:col-end-13
+					md:row-start-2
+					md:row-end-5
+					col-span-full
+					row-start-4
+					row-end-7
+					xl:px-[90px]
+					lg:px-[45px]
+					px-[20px]
+					pt-[45px]
+					md:pt-0
+				"
+			>
 				<h1>{title}</h1>
 				<p className="py-4">{description}</p>
 				<div className="text-left w-full">
-					<button className="flex items-center space-x-2 tracking-[1rem]">
+					<button className="flex items-center space-x-2 tracking-[1rem] pt-5">
 						SHOP NOW
 						<span className="ml-4">
 							<Image
@@ -74,7 +93,10 @@ const Slider = () => {
 				</div>
 			</div>
 			<div className="bg-[#000] flex cursor-pointer col-start-6 lg:col-start-8 lg:col-end-9 row-start-3 md:row-start-6 md:col-start-8 md:col-end-10 z-10">
-				<div className="w-1/2 m-auto" onClick={prevSlide}>
+				<div
+					className="w-1/2 m-auto"
+					onClick={ prevSlide }
+				>
 					<Image
 						src={IconLeft}
 						alt="Icon Left"
@@ -83,7 +105,10 @@ const Slider = () => {
 						className="m-auto"
 					/>
 				</div>
-				<div className="w-1/2 m-auto" onClick={nextSlide}>
+				<div
+					className="w-1/2 m-auto"
+					onClick={ nextSlide }
+				>
 					<Image
 						src={IconRight}
 						alt="Icon Right"

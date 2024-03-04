@@ -7,16 +7,11 @@ import Hamburger from "../../public/icon-hamburger.svg";
 import Close from "../../public/icon-close.svg";
 
 const Header = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-	const toggleMenu = () => {
-		setIsMenuOpen(!isMenuOpen);
-	};
+	const [ isMenuOpen, setIsMenuOpen ] = useState(false);
 
 	return (
 		<div className="relative">
-			{/* Header content */}
-			<div className="flex justify-between items-center min-w-[360px] px-4 sm:px-6 lg:px-8">
+			<div className="flex w-full px-4 sm:px-6 lg:px-8">
 				{/* Hamburger menu icon */}
 				<button className="sm:hidden" onClick={() => setIsMenuOpen(true)}>
 					<Image
@@ -36,7 +31,7 @@ const Header = () => {
 					/>
 				</div>
 
-				<ul className="hidden sm:flex list-none space-x-4">
+				<ul className="hidden sm:flex list-none space-x-4 text-white">
 					<li>home</li>
 					<li>shop</li>
 					<li>about</li>
@@ -46,10 +41,10 @@ const Header = () => {
 
 			{/* Modal for small screens */}
 			{isMenuOpen && (
-				<div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 flex justify-end">
+				<div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex justify-center items-start sm:hidden">
 					{/* Modal content */}
-					<div className="bg-white p-4 w-full h-[100px]">
-						<button onClick={() => setIsMenuOpen(false)}>
+					<div className="w-full flex items-center h-24 bg-white relative">
+						<button className='absolute left-6 top-1/2 transform -translate-y-1/2' onClick={() => setIsMenuOpen(false)}>
 							<Image
 								src={Close}
 								width={24}
@@ -57,7 +52,7 @@ const Header = () => {
 								alt="Close menu"
 							/>
 						</button>
-						<ul className="flex items-center space-y-4 text-black">
+						<ul className="flex items-center gap-6 text-black ml-auto pr-6">
 							<li>home</li>
 							<li>shop</li>
 							<li>about</li>
