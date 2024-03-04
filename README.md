@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click Here](https://your-solution-url.com)
+- Solution URL: [Click Here](https://www.frontendmentor.io/solutions/room-homepage-built-w-nextjs-N7unKIltYM)
 - Live Site URL: [Click Here](https://thunderous-cheesecake-d9f5d7.netlify.app/)
 
 ## My process
